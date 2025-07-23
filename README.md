@@ -1,3 +1,3 @@
-## Projeto de ETL local
+# Projeto de ETL local
 
-# Alinhamento com os stakeholders
+## Alinhamento com os stakeholders
