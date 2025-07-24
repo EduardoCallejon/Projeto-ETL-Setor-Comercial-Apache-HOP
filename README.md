@@ -1,19 +1,94 @@
-# Projeto de ETL local
+# 🚀 Projeto de ETL Local
 
-## Alinhamento com os stakeholders <br>
-Em conversa com os representantes da empresa, foi alinhado a necessidade dos seguintes indicadores; <br>
-1 - Venda por período <br>
-2 - Venda por vendedor <br>
-3 - Venda por produto <br>
-<br>
-## Montagem da arquitetura
+Este projeto tem como objetivo demonstrar uma arquitetura simples e funcional de ETL rodando localmente, utilizando ferramentas como **Python**, **Apache Hop**, **PostgreSQL** e **Power BI**, simulando um fluxo real de dados empresariais.
 
-Os dados de origem  para está análise, foram gerados através do Python.
+---
 
-O projeto irá abordar um cenário, onde os dados vem de planilhas em excel, após isso os dados são tratados via apache HOP enviados para um banco staging area, e a partir do mesmo, é feita as trativas de atualização incremental e é enviado para o DW, que será consumido por Power BI, abaixo segue a ilustração;
+## 🤝 Alinhamento com os Stakeholders
 
-<img width="1187" height="556" alt="Image" src="https://github.com/user-attachments/assets/f3d9b9e6-9fa6-4db2-86de-3515fc33011b" />
-<br>
-## Modelagem de banco de dados
+Durante a fase inicial, em reuniões com os representantes da empresa, foram identificadas as principais necessidades analíticas. Os indicadores-chave (KPIs) definidos foram:
 
-Para a modelagem, está sendo utilizado o modelo star schema conforme ilustrado abaixo;
+1. 📊 Vendas por período  
+2. 👨‍💼 Vendas por vendedor  
+3. 📦 Vendas por produto
+
+Esses indicadores orientam toda a estrutura de dados e a modelagem do Data Warehouse.
+
+---
+
+## 🏗️ Arquitetura da Solução
+
+Os dados de origem foram simulados por meio de arquivos **Excel** gerados em **Python**, representando um ambiente transacional. A arquitetura do processo segue o fluxo abaixo:
+
+1. **Extração** dos dados em Excel  
+2. **Transformação** com Apache Hop  
+3. **Carga na área de Staging (PostgreSQL)**  
+4. **Tratamento incremental e envio ao DW**  
+5. **Visualização dos dados no Power BI**
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f3d9b9e6-9fa6-4db2-86de-3515fc33011b" width="800px" />
+</p>
+
+---
+
+## 🧠 Modelagem de Banco de Dados
+
+Para possibilitar análises eficientes, foi adotado o modelo **Star Schema** (Esquema em Estrela), que facilita a visualização dos dados e garante performance nas consultas.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/0efb8b67-74f9-43a8-88da-cc9ce2951463" width="800px" />
+</p>
+
+---
+
+## 🔄 Carga de Dados para o Banco Staging
+
+A carga inicial dos dados é feita por meio do **Apache Hop**. O pipeline principal é responsável por ler os dados em Excel e inseri-los no banco staging. As etapas utilizadas foram:
+
+1. 📥 Microsoft Excel Input  
+2. 🧭 Get System Info (para rastrear data/hora da carga)  
+3. 🛢️ Table Output
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/c8432d99-d252-417e-92a1-ea2a16a1cffd" width="500px" />
+</p>
+
+---
+
+## ⚙️ Automatização com Workflow
+
+Para executar todos os pipelines em sequência e de forma automatizada, foi criado um **workflow** dentro do Apache Hop:
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/34f8daf5-0818-4a4e-8dab-d046bc7bc94d" width="500px"/>
+</p>
+
+---
+
+## 📥 Carga Incremental no Data Warehouse
+
+A etapa final consiste em realizar a carga incremental dos dados tratados para o **Data Warehouse**, garantindo que apenas novos registros ou atualizações sejam aplicados, evitando retrabalho e duplicações.
+
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/003c27c2-85f1-4140-8be6-56b472106c99" width="500px"/>
+</p>
+
+---
+
+## 📌 Tecnologias Utilizadas
+
+- 🐍 Python (geração de dados)
+- 📊 Power BI (visualização dos dados)
+- 🐘 PostgreSQL (armazenamento dos dados)
+- 🛠️ Apache Hop (ETL e workflows)
+
+---
+
+## ✍️ Autor
+
+**Eduardo Callejon**  
+Estudante em Análise e Engenharia de Dados  
+
+---
+
