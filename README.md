@@ -81,8 +81,9 @@ A etapa final consiste em realizar a carga incremental dos dados tratados para o
 Após concluir as etapas de extração, transformação e carga dos dados, é hora de transformar essas informações em insights visuais por meio de um dashboard interativo. Utilizamos o Power BI para criar visualizações intuitivas que facilitam a análise e a tomada de decisões. 
 
 <p align="center">
+  <img src="https://github.com/user-attachments/assets/9e117a42-fd44-4586-8f16-444a9cae2d51" width="500px" />
   <img src="https://github.com/user-attachments/assets/cbb83dc4-acb7-4060-b7f4-1415c9ae6501" width="500px" />
-
+  
 </p>
 
 [🔗 Clique aqui para acessar o dashboard interativo no Power BI](https://app.powerbi.com/view?r=eyJrIjoiOGRlZmMyMTUtZmQxMi00MWU3LTg0M2UtMjg0Y2MzZjg5YTg2IiwidCI6ImUwZjRhNWZkLWEzZTItNDZlOS1iYjEyLTliZDdjZjI2Y2U4YiJ9)
